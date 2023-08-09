@@ -1,0 +1,45 @@
+body{
+    background-color: #46A4BD;
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+}
+h1{
+    font-family: 'Bungee', cursive;
+}
+
+nav{
+    background-color: #FFFFFF !important;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 1;
+}
+
+
+.nav-link-block{
+    padding: 0;
+    width: 5vw;
+    height: 20vh;
+}
+.nav-link{
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 4;
+}
+.nav-navigation-link{
+    position: relative;
+    padding-top: 8vh;
+    z-index: 5;
+}
+
+.nav-logo{
+    height: 15vh;
+    border-radius: 50%;
+    background-position: center;
+    background-size: contain;
+}
+
+.carousel-homepage{
+    background-color: #FFFFFF;
+}
