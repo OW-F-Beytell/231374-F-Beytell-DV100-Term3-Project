@@ -1,5 +1,5 @@
 body{
-    background-color: #46A4BD;
+    background-color: #46a4bd;
     color: #FFFFFF;
     font-family: 'Lato', sans-serif;
 }
@@ -7,39 +7,109 @@ h1{
     font-family: 'Bungee', cursive;
 }
 
-nav{
-    background-color: #FFFFFF !important;
-    left: 0px;
-    top: 0px;
-    bottom: 0px;
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #46A4BD;
     z-index: 1;
 }
-
-
-.nav-link-block{
-    padding: 0;
-    width: 5vw;
-    height: 20vh;
+#vertical-navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 120px;
+  height: 100vh;
+  transition: width 0.3s ease-in-out;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+  z-index: 5;
+  position: fixed;
 }
-.nav-link{
-    padding: 0;
-    margin: 0 auto;
-    text-align: center;
-    z-index: 4;
+.bluenav {
+    background-color: #46A4BD;
 }
-.nav-navigation-link{
-    position: relative;
-    padding-top: 8vh;
-    z-index: 5;
+.whitenav {
+    background-color: #FFFFFF;
 }
 
-.nav-logo{
-    height: 15vh;
-    border-radius: 50%;
-    background-position: center;
-    background-size: contain;
+#vertical-navbar .home-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  width: 140px;
+  margin-left: 30px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+}
+#vertical-navbar .home-button {
+    cursor: pointer;
+}
+.bluenavhome {
+    background-image: url("../assets/captain_jacks_logo_blue.png");
+}
+.whitenavhome {
+    background-image: url("../assets/captain_jacks_logo_white.png");
+}
+
+.nav-link {
+    width: 100%;
+    margin-left: -50px;
+    font-weight: normal;
+}
+.nav-link:hover {
+    margin-left: -48px;
+    font-weight: 500;
+}
+.bluenavlink {
+    color: #FFFFFF;
+}
+.whitenavlink {
+    color: #46A4BD;
+}
+.bluenavlink:hover {
+    color: #FFFFFF;
+}
+.whitenavlink:hover {
+    color: #46A4BD;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.link-text {
+    display: none;
+    margin-left: 10px;
 }
 
 .carousel-homepage{
     background-color: #FFFFFF;
+    color: #46a4bd;
+    border-radius: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.carousel-text{
+    height: 100px;
+    height: 80vh;
+}
+.carousel-content{
+    margin: 0 auto;
+    text-align: center;
+    color: #46a4bd;
+    padding-bottom: 20px;
+}
+.carousel-content a{
+    padding-top: 15px;
+}
+.carousel-spacer{
+    height: 40px;
+    width: 100%;
 }
