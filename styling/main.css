@@ -113,3 +113,27 @@ body, html {
     height: 40px;
     width: 100%;
 }
+
+.weatherBlock{
+    width: 484px;
+    height: 336px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #FFF;
+}
+
+.homeAccordion{
+    border-radius: 20px;
+    overflow: hidden;
+}
+.accordion-button {
+    font-weight: bold !important;
+    font-size: x-large;
+    color: #C83E4D;
+}
+.accordion-button:not(.collapsed) {
+    font-weight: bold !important;
+    font-size: x-large;
+    color: #C83E4D;
+    background-color: inherit;
+}
