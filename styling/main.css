@@ -10,8 +10,9 @@ h1{
 body, html {
     height: 100%;
     margin: 0;
+    padding: 0;
     background-color: #46A4BD;
-    z-index: 1;
+    z-index: 1 !important;
 }
 #vertical-navbar {
   display: flex;
@@ -22,7 +23,7 @@ body, html {
   height: 100vh;
   transition: width 0.3s ease-in-out;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
-  z-index: 5;
+  z-index: 5 !important;
   position: fixed;
 }
 .bluenav {
@@ -136,4 +137,21 @@ body, html {
     font-size: x-large;
     color: #C83E4D;
     background-color: inherit;
+}
+
+/* ul{
+    list-style: none;
+} */
+.socials{
+    list-style: none;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.social-icon{
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    float: left;
 }
