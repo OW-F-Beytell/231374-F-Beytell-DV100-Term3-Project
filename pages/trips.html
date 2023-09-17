@@ -71,115 +71,25 @@
         </div>
         
         <div class="row">
-            <table class="table table-hover" style="width: 50%; margin-left: 125px; background-color: #ffffff;">
+          <div class="col-6">
+            <table class="table table-hover" style="margin-left: 125px; background-color: #ffffff;">
                 <thead>
                   <tr>
                     <th scope="col">Trip Code</th>
+                    <th scope="col">Departure Point</th>
                     <th scope="col">Destinations On Route</th>
                     <th scope="col">Departure Date</th>
                     <th scope="col">Trip Duration</th>
                   </tr>
                 </thead>
-                <tbody>
-                    <!-- Cruise 1: Tropical Paradise Escape -->
-                    <tr>
-                      <td>C418</td>
-                      <td>Cape Town, Seychelles, Maldives</td>
-                      <td>July 15, 2023</td>
-                      <td>14 days</td>
-                    </tr>
-                
-                    <!-- Cruise 2: Mediterranean Magic -->
-                    <tr>
-                      <td>A327</td>
-                      <td>Barcelona, Rome, Athens</td>
-                      <td>August 10, 2023</td>
-                      <td>10 days</td>
-                    </tr>
-                
-                    <!-- Cruise 3: Bermuda Bliss -->
-                    <tr>
-                      <td>N502</td>
-                      <td>New York, Bermuda, Miami</td>
-                      <td>September 5, 2023</td>
-                      <td>7 days</td>
-                    </tr>
-                
-                    <!-- Cruise 4: Caribbean Cruise Adventure -->
-                    <tr>
-                      <td>C720</td>
-                      <td>Miami, Jamaica, Grand Cayman</td>
-                      <td>October 2, 2023</td>
-                      <td>9 days</td>
-                    </tr>
-                
-                    <!-- Cruise 5: Northern Lights Expedition -->
-                    <tr>
-                      <td>A912</td>
-                      <td>Reykjavik, Oslo, St. Petersburg</td>
-                      <td>November 15, 2023</td>
-                      <td>12 days</td>
-                    </tr>
-                
-                    <!-- Cruise 6: Pacific Island Paradise -->
-                    <tr>
-                      <td>P611</td>
-                      <td>Honolulu, Bora Bora, Fiji</td>
-                      <td>December 20, 2023</td>
-                      <td>16 days</td>
-                    </tr>
-                
-                    <!-- Cruise 7: Amazon River Expedition -->
-                    <tr>
-                      <td>A825</td>
-                      <td>Manaus, Iquitos, Leticia</td>
-                      <td>January 10, 2024</td>
-                      <td>11 days</td>
-                    </tr>
-                
-                    <!-- Cruise 8: Arctic Wildlife Discovery -->
-                    <tr>
-                      <td>N312</td>
-                      <td>Longyearbyen, Tromsø, Reykjavik</td>
-                      <td>February 22, 2024</td>
-                      <td>14 days</td>
-                    </tr>
-                
-                    <!-- Cruise 9: Greek Isles Odyssey -->
-                    <tr>
-                      <td>G521</td>
-                      <td>Athens, Santorini, Mykonos</td>
-                      <td>March 8, 2024</td>
-                      <td>7 days</td>
-                    </tr>
-                
-                    <!-- Cruise 10: Alaskan Wilderness Explorer -->
-                    <tr>
-                      <td>A740</td>
-                      <td>Juneau, Anchorage, Glacier Bay</td>
-                      <td>April 20, 2024</td>
-                      <td>10 days</td>
-                    </tr>
-                
-                    <!-- Cruise 11: South American Discovery -->
-                    <tr>
-                      <td>S612</td>
-                      <td>Rio de Janeiro, Buenos Aires, Santiago</td>
-                      <td>May 12, 2024</td>
-                      <td>13 days</td>
-                    </tr>
-                
-                    <!-- Cruise 12: Baltic Sea Explorer -->
-                    <tr>
-                      <td>B423</td>
-                      <td>Stockholm, Helsinki, Copenhagen</td>
-                      <td>June 7, 2024</td>
-                      <td>9 days</td>
-                    </tr>
-                
-                    <!-- Add more cruises here -->
-                  </tbody>
-              </table>
+                <tbody id="cruiseTable">
+                    
+                </tbody>
+            </table>
+          </div>
+          <div class="col-6">
+
+          </div>
         </div>
       </div>
       <footer>
@@ -201,9 +111,39 @@
         </div>
       </footer>
 
-    </div>
+    </div>    
 
-    
+    <!-- Templates -->
+
+    <template id="cruiseTableEntry">
+      <tr onclick="entrySelect(this)">
+        <td id="cruiseCode">C418</td>
+        <td id="cruiseDepartPoint">Cape Town</td>
+        <td id="cruiseDestinations">Seychelles, Maldives</td>
+        <td id="cruiseDepartureDate">2023/07/15</td>
+        <td id="cruiseDuration">14 days</td>
+      </tr>
+    </template>
+
+    <template id="cruiseTableEntryFold">
+      <div class="container-fluid">
+        <div class="row">
+          <h1 class="display-6" id="cruiseName">Cruise Name</h1>
+          <p id="cruiseDescription">Cruise Description</p>
+        </div>
+        <div class="row">
+          <p id="cruiseRoute"><strong>Route:</strong> </p>
+        </div>
+        <div class="row">
+          <h1 class="display-6" id="cruiseCost">Cruise Cost</h1>
+        </div>
+        <div class="row">
+          <a href="#" class="btn btn-primary" style="background-color: #C83E4D"><h1 class="display-6">Book Your Spot</h1></a>
+        </div>
+      </div>
+    </template>
+
+
  
     <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -211,6 +151,7 @@
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="../scripts/index.js"></script>
+  <script src="../scripts/trips.js"></script>
 
   </body>
 </html>
