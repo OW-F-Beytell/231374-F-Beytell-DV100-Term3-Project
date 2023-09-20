@@ -7,7 +7,9 @@ const arrCruises = [
         departureYear: 2023,
         departureMonth: 7,
         departureDay: 15,
-        tripDuration: 14
+        tripDuration: 14,
+        cost: 10500,
+        description: "Experience the ultimate tropical getaway on this 14-day cruise. Explore the beautiful islands of Jamaica and Grand Cayman while enjoying luxurious amenities and breathtaking ocean views."
     },
     {
         name: "Mediterranean Magic",
@@ -17,7 +19,9 @@ const arrCruises = [
         departureYear: 2023,
         departureMonth: 8,
         departureDay: 10,
-        tripDuration: 10
+        tripDuration: 10,
+        cost: 8500,
+        description: "Embark on a 10-day journey through the enchanting Mediterranean. From the historic streets of Rome to the ancient wonders of Athens, this cruise offers a taste of European splendor."
     },
     {
         name: "Bermuda Bliss",
@@ -27,7 +31,9 @@ const arrCruises = [
         departureYear: 2023,
         departureMonth: 9,
         departureDay: 5,
-        tripDuration: 7
+        tripDuration: 7,
+        cost: 6500,
+        description: "Escape to the pink sand beaches of Bermuda on this 7-day cruise departing from New York. Relax in paradise and soak up the sun in the Atlantic Ocean."
     },
     {
         name: "Caribbean Cruise Adventure",
@@ -37,7 +43,9 @@ const arrCruises = [
         departureYear: 2023,
         departureMonth: 10,
         departureDay: 2,
-        tripDuration: 9
+        tripDuration: 9,
+        cost: 7200,
+        description: "Set sail from Miami on a 9-day Caribbean adventure. Discover the vibrant culture of Jamaica and the natural beauty of Grand Cayman."
     },
     {
         name: "Northern Lights Expedition",
@@ -47,7 +55,9 @@ const arrCruises = [
         departureYear: 2023,
         departureMonth: 11,
         departureDay: 15,
-        tripDuration: 12
+        tripDuration: 12,
+        cost: 9800,
+        description: "Chase the mystical Northern Lights on a 12-day expedition from Reykjavik to St. Petersburg. Witness the breathtaking natural phenomenon and explore historic cities."
     },
     {
         name: "Pacific Island Paradise",
@@ -57,7 +67,9 @@ const arrCruises = [
         departureYear: 2023,
         departureMonth: 12,
         departureDay: 20,
-        tripDuration: 16
+        tripDuration: 16,
+        cost: 12200,
+        description: "Experience paradise in the Pacific on a 16-day cruise. Visit the stunning islands of Bora Bora and Fiji, where white-sand beaches and turquoise waters await."
     },
     {
         name: "Amazon River Expedition",
@@ -67,7 +79,9 @@ const arrCruises = [
         departureYear: 2024,
         departureMonth: 1,
         departureDay: 10,
-        tripDuration: 11
+        tripDuration: 11,
+        cost: 8900,
+        description: "Explore the heart of the Amazon on an 11-day river expedition. Navigate the mighty Amazon River and discover the rich biodiversity of the rainforest."
     },
     {
         name: "Arctic Wildlife Discovery",
@@ -77,7 +91,9 @@ const arrCruises = [
         departureYear: 2024,
         departureMonth: 2,
         departureDay: 22,
-        tripDuration: 14
+        tripDuration: 14,
+        cost: 10500,
+        description: "Witness the wonders of the Arctic on a 14-day wildlife discovery. Encounter polar bears, seals, and stunning landscapes in the far north."
     },
     {
         name: "Greek Isles Odyssey",
@@ -87,7 +103,9 @@ const arrCruises = [
         departureYear: 2024,
         departureMonth: 3,
         departureDay: 8,
-        tripDuration: 7
+        tripDuration: 7,
+        cost: 6200,
+        description: "Sail through the picturesque Greek Isles on a 7-day odyssey. Explore the charming villages of Santorini and the lively beaches of Mykonos."
     },
     {
         name: "Alaskan Wilderness Explorer",
@@ -97,7 +115,9 @@ const arrCruises = [
         departureYear: 2024,
         departureMonth: 4,
         departureDay: 20,
-        tripDuration: 10
+        tripDuration: 10,
+        cost: 7800,
+        description: "Embark on a 10-day wilderness adventure in Alaska. Witness calving glaciers and diverse wildlife in the stunning wilderness of the Last Frontier."
     },
     {
         name: "South American Discovery",
@@ -107,7 +127,9 @@ const arrCruises = [
         departureYear: 2024,
         departureMonth: 5,
         departureDay: 12,
-        tripDuration: 13
+        tripDuration: 13,
+        cost: 9400,
+        description: "Discover the vibrant culture of South America on a 13-day journey. From Rio de Janeiro to Santiago, experience the rich history and flavors of the continent."
     },
     {
         name: "Baltic Sea Explorer",
@@ -117,7 +139,9 @@ const arrCruises = [
         departureYear: 2024,
         departureMonth: 6,
         departureDay: 7,
-        tripDuration: 9
+        tripDuration: 9,
+        cost: 7100,
+        description: "Cruise through the historic cities of the Baltic Sea on a 9-day exploration. Visit Stockholm, Helsinki, and Copenhagen for a taste of northern Europe."
     },
     {
         name: "Bahamas Getaway",
@@ -127,7 +151,9 @@ const arrCruises = [
         departureYear: 2023,
         departureMonth: 7,
         departureDay: 2,
-        tripDuration: 4
+        tripDuration: 4,
+        cost: 4500,
+        description: "Escape to the Bahamas for a quick 4-day getaway from Miami. Relax on beautiful beaches and explore the vibrant culture of Nassau and Freeport."
     },
     {
         name: "Weekend Escape to Key West",
@@ -137,7 +163,9 @@ const arrCruises = [
         departureYear: 2023,
         departureMonth: 8,
         departureDay: 18,
-        tripDuration: 3
+        tripDuration: 3,
+        cost: 3200,
+        description: "Enjoy a weekend escape to Key West and Havana. Discover the charm of these two iconic destinations just a short cruise from Miami."
     },
     {
         name: "California Coast Explorer",
@@ -147,7 +175,9 @@ const arrCruises = [
         departureYear: 2023,
         departureMonth: 9,
         departureDay: 5,
-        tripDuration: 5
+        tripDuration: 5,
+        cost: 5500,
+        description: "Explore the stunning California coast on a 5-day journey from Los Angeles. Visit San Francisco and San Diego, two of California's most iconic cities."
     },
     {
         name: "Caribbean Sampler",
@@ -157,7 +187,9 @@ const arrCruises = [
         departureYear: 2023,
         departureMonth: 10,
         departureDay: 12,
-        tripDuration: 3
+        tripDuration: 3,
+        cost: 3800,
+        description: "Savor a taste of the Caribbean on a 3-day sampler cruise from Miami. Enjoy the vibrant culture of Cozumel and the natural beauty of the Cayman Islands."
     },
     {
         name: "Hawaiian Island Hopper",
@@ -167,7 +199,9 @@ const arrCruises = [
         departureYear: 2023,
         departureMonth: 12,
         departureDay: 12,
-        tripDuration: 5
+        tripDuration: 5,
+        cost: 4900,
+        description: "Hop between the stunning Hawaiian Islands on a 5-day adventure. From Honolulu to Maui and Kauai, experience the beauty of Hawaii."
     },
     {
         name: "Weekend Cruise to Ensenada",
@@ -177,7 +211,9 @@ const arrCruises = [
         departureYear: 2024,
         departureMonth: 1,
         departureDay: 20,
-        tripDuration: 4
+        tripDuration: 4,
+        cost: 4200,
+        description: "Escape for a weekend cruise to Ensenada and Cabo San Lucas. Relax on the Baja California coast and enjoy the vibrant atmosphere of these Mexican destinations."
     },
     {
         name: "Caribbean Beach Break",
@@ -187,7 +223,9 @@ const arrCruises = [
         departureYear: 2024,
         departureMonth: 2,
         departureDay: 14,
-        tripDuration: 5
+        tripDuration: 5,
+        cost: 4700,
+        description: "Take a break on the sandy shores of the Caribbean. Explore the Bahamas and Cozumel on this 5-day beach getaway from Miami."
     },
     {
         name: "Pacific Coastal Explorer",
@@ -197,7 +235,9 @@ const arrCruises = [
         departureYear: 2024,
         departureMonth: 3,
         departureDay: 22,
-        tripDuration: 4
+        tripDuration: 4,
+        cost: 4100,
+        description: "Discover the beauty of the Pacific coast on a 4-day coastal exploration. Cruise from San Francisco to Seattle and Victoria for breathtaking scenery."
     },
     {
         name: "Mexican Riviera Adventure",
@@ -207,7 +247,9 @@ const arrCruises = [
         departureYear: 2024,
         departureMonth: 4,
         departureDay: 15,
-        tripDuration: 5
+        tripDuration: 5,
+        cost: 4900,
+        description: "Embark on a Mexican Riviera adventure from Los Angeles. Enjoy the vibrant culture of Cabo San Lucas and the tropical paradise of Puerto Vallarta."
     },
     {
         name: "Eastern Mediterranean Escape",
@@ -217,7 +259,9 @@ const arrCruises = [
         departureYear: 2024,
         departureMonth: 5,
         departureDay: 10,
-        tripDuration: 5
+        tripDuration: 5,
+        cost: 5200,
+        description: "Escape to the eastern Mediterranean on a 5-day journey. Explore the idyllic islands of Mykonos and Santorini from the ancient city of Athens."
     },
     {
         name: "Weekend Getaway to the Bahamas",
@@ -227,57 +271,83 @@ const arrCruises = [
         departureYear: 2024,
         departureMonth: 6,
         departureDay: 25,
-        tripDuration: 3
+        tripDuration: 3,
+        cost: 3600,
+        description: "Indulge in a quick weekend getaway to the Bahamas from Miami. Experience the beauty of Nassau and Freeport on this 3-day tropical escape."
     }
 ];
 
-$(document).ready(function () {
-    console.log("hello world");
+let cruisesInCart = [];
 
+
+$(document).ready(function () {
+    $("#foldColumn").hide();
     $("#cruiseTable").empty();
     loadCruises(arrCruises);
 });
 
+$('#cruiseList').on('click', 'tbody tr', function(event) {
+    $(this).addClass('selectedEntry').siblings().removeClass('selectedEntry');
+    
+    currCruise = findCorrectEntry($('.selectedEntry').find('#cruiseCode').text());
+    openInfoFold();
+});
+
+
 function loadCruises(arrayToLoad) {
     for (let i = 0; i < arrayToLoad.length; i++) {
         currCruise = arrayToLoad[i];
-        console.log(currCruise);
 
-        // 1: Select the plants container add the plant card to it
         $("#cruiseTable").append($("#cruiseTableEntry").html());
 
-        // 2: Create a variable that contains the most recently added plant card
         let currentChild = $("#cruiseTable").children().eq(i);
 
-        // 3: Set the content for the current plant card from the plant array
         $(currentChild).find("#cruiseCode").text(currCruise.tripCode);
         $(currentChild).find("#cruiseDepartPoint").text(currCruise.departurePoint);
         $(currentChild).find("#cruiseDestinations").text(myToString(currCruise.destinations));
         $(currentChild).find("#cruiseDepartureDate").text(currCruise.departureYear + "/" + currCruise.departureMonth + "/" + currCruise.departureDay);
         $(currentChild).find("#cruiseDuration").text(currCruise.tripDuration + " days");
-        
-
-        // // 4: Hide the description text from the curent card
-        // $(currentChild).find("#descriptionText").hide();
-        // $(currentChild).find("#originTemp").hide();
     }
 }
 
-function entrySelect(entry) {
-    console.log(entry);
-    code = entry.getElementByID('.tripCode');
-    // for (let i = 0; i < arrCruises.length; i++) {
-    //     currCruise = arrCruises[i];
-    //     if (currCruise.tripCode === code) {
-    //         console.log(currCruise.name);
-    //     }
-    // }
+function openInfoFold() {
+    let correctElement = findCorrectEntry($('.selectedEntry').find('#cruiseCode').text());
+    
+    $("#foldColumn").show();
+    $('#foldColumn').find('#cruiseName').html(correctElement.name);
+    $('#foldColumn').find('#cruiseDescription').html(correctElement.description);
+    $('#foldColumn').find('#cruiseCode').html('<strong>Cruise Code:</strong> ' + correctElement.tripCode);
+    $('#foldColumn').find('#cruiseDepartLocation').html('<strong>Depart from:</strong> ' + correctElement.departurePoint);
+    $('#foldColumn').find('#cruiseDepartDate').html('<strong>Departure Date:</strong> ' + correctElement.departureYear + "/" + correctElement.departureMonth + "/" + correctElement.departureDay);
+    $('#foldColumn').find('#cruiseRoute').html('<strong>Destinations:</strong> ' + myToString(correctElement.destinations));
+    $('#foldColumn').find('#cruiseDuration').html('<strong>Cruise Duration:</strong> ' + correctElement.tripDuration + ' days');
+    $('#foldColumn').find('#cruiseCost').html('<strong>Ticket Cost:</strong> R' + correctElement.cost.toFixed(2));
 }
 
-$("#cruiseTable").on("click-row.bs.table", "tr", function () {
-    console.log("Clicked");
+function addCruiseToCart() {
+    let correctCruise = findCorrectEntry($('.selectedEntry').find('#cruiseCode').text());
+    if (myInArray(correctCruise, cruisesInCart)) {
+        console.log('Already in cart');
+    }
+    else {
+        cruisesInCart.push(correctCruise);
+    }
+}
 
-});
+
+function findCorrectEntry(selectedElement) {
+    for (let i = 0; i < arrCruises.length; i++) {
+        currElement = arrCruises[i];
+         if (currElement.tripCode === selectedElement) {
+            correctElement = currElement;
+            break;
+         }
+    }
+    if (correctElement === null) {
+        return null;
+    }
+    return correctElement;
+}
 
 function myToString(array) {
     let output = "";
@@ -291,23 +361,12 @@ function myToString(array) {
     return output;
 }
 
-/* <template id="cruiseTableEntry">
-      <tr>
-        <td id="cruiseCode">C418</td>
-        <td id="cruiseDepartPoint">Cape Town</td>
-        <td id="cruiseDestinations">Seychelles, Maldives</td>
-        <td id="cruiseDepartureDate">2023/07/15</td>
-        <td id="cruiseDuration">14 days</td>
-      </tr>
-    </template> */
-
-// {
-//     name: "Tropical Paradise Escape",
-//     tripCode: "C418",
-//     departurePoint: "Miami",
-//     destinations: ["Jamaica", "Grand Cayman"],
-//     departureYear: 2023,
-//     departureMonth: 7,
-//     departureDay: 15,
-//     tripDuration: 14
-// },
+function myInArray(item, array) {
+    for (let i = 0; i < array.length; i++) {
+        currElement = array[i];
+        if (array[i].tripCode == item.tripCode) {
+            return true;
+        }
+    }    
+    return false;
+}
