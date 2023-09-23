@@ -26,7 +26,7 @@
           <span class="link-text">Trips</span>
         </div>
       </a>
-      <a href="pages/purchasetickets.html" class="nav-link whitenavlink">
+      <a href="../pages/purchasetickets.html" class="nav-link whitenavlink">
         <div class="link-item">
           <i class="icon"><img src="../assets/icon_cart_blue.svg"></i>
           <span class="link-text">Purchase</span>
@@ -70,90 +70,84 @@
             </div>
         </div>
         
-        <!-- <div class="row" style="margin-left: 125px; margin-right: 125px;">
-          <table class="table table-hover" id="cruiseList" style="background-color: #ffffff; float: left; max-width: 50%; margin-bottom: 0;">
-            <thead>
-              <tr>
-                <th scope="col">Trip Code</th>
-                <th scope="col">Departure Point</th>
-                <th scope="col">Destinations On Route</th>
-                <th scope="col">Departure Date</th>
-                <th scope="col">Trip Duration</th>
-              </tr>
-            </thead>
-            <tbody id="cruiseTable">
-                
-            </tbody>
-          </table>
-          <div class="card-deck" style="float: left; max-width: 50%;">
-            <div class="card" id="foldColumn" style="width: 18rem; background-color: #ffffff; color: #313638;">
-              <div class="card-body">
-                <h5 class="card-title" id="cruiseName"></h5>
-                <p class="card-text" id="cruiseDescription"></p>
-                <p class="card-text" id="cruiseCode"></p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <div id="cruiseDepartLocation"></div>
-                  <div id="cruiseDepartDate"></div>
-                  <div id="cruiseRoute"></div>
-                  <div id="cruiseDuration"></div>
-                </li>
-
-                <li class="list-group-item">
-                  <div id="cruiseCost"></div>
-                </li>
-              </ul>
-              <div class="card-body">
-                <a href="#" class="btn btn-primary" style="background-color: #C83E4D"><h1 class="display-6">Book Your Spot</h1></a>
-              </div>
-            </div>
-          </div>
-        </div> -->
         <div class="row" style="margin-left: 125px; margin-right: 125px;">
-          <div class="card-group"></div>
-            <div class="card" style="width: 36rem; background-color: #ffffff; color: #313638; padding: 0px;">
-              <div class="card-body">
-                <table class="table table-hover" id="cruiseList" style="background-color: #ffffff;">
-                  <thead>
-                    <tr>
-                      <th scope="col">Trip Code</th>
-                      <th scope="col">Departure Point</th>
-                      <th scope="col">Destinations On Route</th>
-                      <th scope="col">Departure Date</th>
-                      <th scope="col">Trip Duration</th>
-                    </tr>
-                  </thead>
-                  <tbody id="cruiseTable">
-                      
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="card" id="foldColumn" style="width: 18rem; background-color: #ffffff; color: #313638;">
-              <div class="card-body">
-                <h5 class="card-title" id="cruiseName"></h5>
-                <p class="card-text" id="cruiseDescription"></p>
-                <p class="card-text" id="cruiseCode"></p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <div id="cruiseDepartLocation"></div>
-                  <div id="cruiseDepartDate"></div>
-                  <div id="cruiseRoute"></div>
-                  <div id="cruiseDuration"></div>
-                </li>
+          <div class="row row-cols-1 row-cols-md-2 g-4" style="width: 100%; margin-top: 0px;">
+            <div class="col">
+              <div class="card" style="width: 36rem; background-color: #ffffff; color: #313638; padding: 0px;">
+                <div class="card-header">
+                  <div class="searchandfilter" style="float: right;">
+                    Filter:<select id="filterDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="max-width: 300px;" onchange="filterCruises()">
+                      <!-- <option>Open this select menu</option> -->
+                      <option value="1" selected>All Destinations</option>
+                      <option value="2">Short Duration Trips</option>
+                      <option value="3">Long Duration Trips</option>
+                      <option value="4">Single Destination</option>
+                      <option value="5">Multi Destinations</option>
+                      <option value="6">Round Trips</option>
+                      <option value="7">Row Boat Special</option>
+                    </select>
 
-                <li class="list-group-item">
-                  <div id="cruiseCost"></div>
-                </li>
-              </ul>
-              <div class="card-body">
-                <a class="btn btn-primary" onclick="addCruiseToCart()" style="background-color: #C83E4D"><h1 class="display-12">Book Your Spot</h1></a>
+
+                    <!-- All Destinations: Must show all available trip options.
+                    ● Short Duration Trips: Only show trips that take 5 or less days.
+                    ● Long Duration Trips: Only show trips that take longer than 5
+                    days.
+                    ● Single Destination: Show trips that have only one
+                    destination.
+                    ● Multi Destinations: Show trips that have more than one
+                    destination.
+                    ● Round Trips: Show trips that return to their port of origin.
+                    ● Row Boat Special: Show the top 5 cheapest trips -->
+
+
+
+                  </div>
+                </div>
+                <div class="card-body">
+                  <table class="table table-hover" id="cruiseList" style="background-color: #ffffff;">
+                    <thead>
+                      <tr>
+                        <th scope="col">Trip Code</th>
+                        <th scope="col">Departure Point</th>
+                        <th scope="col">Destinations On Route</th>
+                        <th scope="col">Departure Date</th>
+                        <th scope="col">Trip Duration</th>
+                      </tr>
+                    </thead>
+                    <tbody id="cruiseTable">
+                        
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
-          </div>
-        <!-- </div> -->
+            <div class="col">
+              <div class="card" id="foldColumn" style="width: 36rem; background-color: #ffffff; color: #313638;">
+                <div class="card-body">
+                  <h5 class="card-title" id="cruiseName"></h5>
+                  <p class="card-text" id="cruiseDescription"></p>
+                  <p class="card-text" id="cruiseCode"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <div id="cruiseDepartLocation"></div>
+                    <div id="cruiseDepartDate"></div>
+                    <div id="cruiseRoute"></div>
+                    <div id="cruiseDuration"></div>
+                  </li>
+
+                  <li class="list-group-item">
+                    <div id="cruiseCost"></div>
+                  </li>
+                </ul>
+                <div class="card-body" style="margin: 0 auto;">
+                  <a id="addButton" class="btn btn-primary disabled" onclick="addCruiseToCart()" style="background-color: #C83E4D"><h1 class="display-12">Book Your Spot</h1></a>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+          
       </div>
       <footer>
         <div class="container-fluid" style="height: 100px; margin-top: 50px; background-color: #C83E4D;">
@@ -178,32 +172,8 @@
 
     <!-- Templates -->
 
-    <template id="cruiseTableEntryFold">
-      <div class="container-fluid" style="height: 100px; background-color: #C83E4D;">
-        <div class="row">
-          <h1 class="display-6" id="cruiseName">Cruise Name</h1>
-          <p id="cruiseDescription">Cruise Description</p>
-        </div>
-        <div class="row">
-          <div id="cruiseCode" style="float: right;">Cruise Code</div>
-        </div>
-        <div class="row">
-          <p id="cruiseDepartLocation"><strong>Depart from:</strong> </p>
-          <p id="cruiseDepartDate"><strong>Departure Date:</strong> </p>
-          <p id="cruiseRoute"><strong>Route:</strong> </p>
-          <p id="cruiseDuration"><strong>Cruise Duration:</strong> </p>
-        </div>
-        <div class="row">
-          <h1 class="display-6" id="cruiseCost">Cruise Cost</h1>
-        </div>
-        <div class="row">
-          <a href="#" class="btn btn-primary" style="background-color: #C83E4D"><h1 class="display-6">Book Your Spot</h1></a>
-        </div>
-      </div>
-    </template>
-
     <template id="cruiseTableEntry">
-      <tr>
+      <tr class="rounded">
         <td id="cruiseCode">C418</td>
         <td id="cruiseDepartPoint">Cape Town</td>
         <td id="cruiseDestinations">Seychelles, Maldives</td>

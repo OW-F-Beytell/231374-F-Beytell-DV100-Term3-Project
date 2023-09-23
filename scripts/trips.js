@@ -287,10 +287,16 @@ $(document).ready(function () {
 });
 
 $('#cruiseList').on('click', 'tbody tr', function(event) {
-    $(this).addClass('selectedEntry').siblings().removeClass('selectedEntry');
-    
-    currCruise = findCorrectEntry($('.selectedEntry').find('#cruiseCode').text());
-    openInfoFold();
+    if ($(this).hasClass('selectedEntry')) {
+        $(this).removeClass('selectedEntry');
+        $("#foldColumn").hide(600);
+    }
+    else {
+        $(this).addClass('selectedEntry').siblings().removeClass('selectedEntry');
+
+        currCruise = findCorrectEntry($('.selectedEntry').find('#cruiseCode').text());
+        openInfoFold();
+    }
 });
 
 
@@ -322,6 +328,12 @@ function openInfoFold() {
     $('#foldColumn').find('#cruiseRoute').html('<strong>Destinations:</strong> ' + myToString(correctElement.destinations));
     $('#foldColumn').find('#cruiseDuration').html('<strong>Cruise Duration:</strong> ' + correctElement.tripDuration + ' days');
     $('#foldColumn').find('#cruiseCost').html('<strong>Ticket Cost:</strong> R' + correctElement.cost.toFixed(2));
+   
+    
+    if (!myInArray(correctElement, cruisesInCart)) {
+        $('#addButton').removeClass('disabled');
+    }
+    $("#foldColumn").show('600');
 }
 
 function addCruiseToCart() {
@@ -331,6 +343,10 @@ function addCruiseToCart() {
     }
     else {
         cruisesInCart.push(correctCruise);
+        $('#addButton').addClass('disabled');
+        $("#foldColumn").hide(600);
+        $('.selectedEntry').removeClass('selectedEntry');
+        saveToLocal();
     }
 }
 
@@ -369,4 +385,15 @@ function myInArray(item, array) {
         }
     }    
     return false;
+}
+
+function saveToLocal() {
+    let listCruisesString = cruisesInCart;
+
+    let data = JSON.stringify(listCruisesString);
+    localStorage.setItem('cruises', data);
+}
+
+function goToPurchasePage(params) {
+    
 }
