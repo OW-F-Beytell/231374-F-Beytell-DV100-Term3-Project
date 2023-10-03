@@ -91,10 +91,3 @@ function clearCart() {
     $('#purchaseTable').empty()
     $('#totalCost').text("R" + determineTotalCost().toFixed(2));
 }
-
-function filterCruises() {
-    sortingMethod = "";
-    if ($('#filterDropdown').attr() == selected) {
-        
-    } ;
-}

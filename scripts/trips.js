@@ -397,3 +397,34 @@ function saveToLocal() {
 function goToPurchasePage(params) {
     
 }
+
+function filterCruises() {
+    switch ($('#filterDropdown').find(':selected').text()) {
+        case "All Destinations":
+            sortingMethod = "";
+            break;
+        case "Short Duration Trips":
+            sortingMethod = "";
+            break;
+        case "Long Duration Trips":
+            sortingMethod = "";
+            break;
+        case "Single Destination":
+            sortingMethod = "";
+            break;
+        case "Multi Destinations":
+            sortingMethod = "";
+            break;
+        case "Round Trips":
+            sortingMethod = "";
+            break;
+        case "Row Boat Special":
+            sortingMethod = "";
+            break;
+    
+        default:
+            break;
+    }
+    console.log($('#filterDropdown').val());
+    console.log($('#filterDropdown').find(':selected').text());
+}
