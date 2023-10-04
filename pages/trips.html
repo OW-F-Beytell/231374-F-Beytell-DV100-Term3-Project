@@ -62,11 +62,11 @@
         </div>
         <div class="row" style="margin: 0; padding: 0;">
             <div class="col-6" style="padding-left: 150px; padding-right: 50px;">
-                
+                <p> Feel free to have a look at the trips we offer. You can browse them all, or you can filter them based on duration, destination and price.</p>
             </div>
             <div class="col-6" style="padding-right: 0px;">
                 <h1 class="display-6">High Tides, Good Vibes</h1>
-                <p> Feel free to have a look at the trips we offer. You can browse them all, or you can filter them based on destination and duration.</p>
+                
             </div>
         </div>
         
@@ -76,7 +76,7 @@
               <div class="card" style="width: 36rem; background-color: #ffffff; color: #313638; padding: 0px;">
                 <div class="card-header">
                   <div class="searchandfilter" style="float: right;">
-                    Filter:<select id="filterDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="max-width: 300px;" onchange="filterCruises()">
+                    Filter:<select id="filterDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="max-width: 300px;" onchange="loadCruises(filterCruises());">
                       <option value="1" selected>All Destinations</option>
                       <option value="2">Short Duration Trips</option>
                       <option value="3">Long Duration Trips</option>
@@ -85,21 +85,6 @@
                       <option value="6">Round Trips</option>
                       <option value="7">Row Boat Special</option>
                     </select>
-
-
-                    <!-- All Destinations: Must show all available trip options.
-                    ● Short Duration Trips: Only show trips that take 5 or less days.
-                    ● Long Duration Trips: Only show trips that take longer than 5
-                    days.
-                    ● Single Destination: Show trips that have only one
-                    destination.
-                    ● Multi Destinations: Show trips that have more than one
-                    destination.
-                    ● Round Trips: Show trips that return to their port of origin.
-                    ● Row Boat Special: Show the top 5 cheapest trips -->
-
-
-
                   </div>
                 </div>
                 <div class="card-body">
@@ -132,6 +117,7 @@
                     <div id="cruiseDepartLocation"></div>
                     <div id="cruiseDepartDate"></div>
                     <div id="cruiseRoute"></div>
+                    <div id="cruiseRoundTrip"></div>
                     <div id="cruiseDuration"></div>
                   </li>
 

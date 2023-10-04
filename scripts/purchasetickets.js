@@ -12,22 +12,25 @@ function loadPurchasePage() {
 
 function loadPurchases(arrayToLoad) {
     $("#purchaseTable").empty();
-    for (let i = 0; i < arrayToLoad.length; i++) {
-        currTrip = arrayToLoad[i];
+    if (arrayToLoad != null) {
+        for (let i = 0; i < arrayToLoad.length; i++) {
+            currTrip = arrayToLoad[i];
 
-        $("#purchaseTable").append($("#purchaseTableEntry").html());
+            $("#purchaseTable").append($("#purchaseTableEntry").html());
 
-        let currentChild = $("#purchaseTable").children().eq(i);
+            let currentChild = $("#purchaseTable").children().eq(i);
 
-        $(currentChild).find("#cruiseName").text(currTrip.name);
-        $(currentChild).find("#cruiseCode").text(currTrip.tripCode);
-        $(currentChild).find("#cruiseDepartPoint").text(currTrip.departurePoint);
-        $(currentChild).find("#cruiseDestinations").text(myToString(currTrip.destinations));
-        $(currentChild).find("#cruiseDepartureDate").text(currTrip.departureYear + "/" + currTrip.departureMonth + "/" + currTrip.departureDay);
-        $(currentChild).find("#cruiseDuration").text(currTrip.tripDuration + " days");
-        thisTicketCost = ($(currentChild).find("#cruiseNumTickets").val()) * (currTrip.cost);
-        $(currentChild).find("#cruiseCost").text("R" + thisTicketCost.toFixed(2));
+            $(currentChild).find("#cruiseName").text(currTrip.name);
+            $(currentChild).find("#cruiseCode").text(currTrip.tripCode);
+            $(currentChild).find("#cruiseDepartPoint").text(currTrip.departurePoint);
+            $(currentChild).find("#cruiseDestinations").text(myToString(currTrip.destinations));
+            $(currentChild).find("#cruiseDepartureDate").text(currTrip.departureYear + "/" + currTrip.departureMonth.toString().padStart(2, '0') + "/" + currTrip.departureDay.toString().padStart(2, '0'));
+            $(currentChild).find("#cruiseDuration").text(currTrip.tripDuration + " days");
+            thisTicketCost = ($(currentChild).find("#cruiseNumTickets").val()) * (currTrip.cost);
+            $(currentChild).find("#cruiseCost").text("R" + thisTicketCost.toFixed(2));
+        }
     }
+    
 }
 
 $('#purchaseTable').on('mouseenter', 'tr', function(event) {
@@ -38,6 +41,7 @@ function removeCruiseFromCart() {
     
     const index = ticketList.indexOf(currCruise);
     const x = ticketList.splice(index, 1);
+    saveToLocal(ticketList);
     $('.hoveredTrip').remove();
     $('#totalCost').text("R" + determineTotalCost().toFixed(2));
 }
@@ -83,11 +87,11 @@ function purchaseTrips(){
 
 function clearCart() {
     arrayLength = ticketList.length;
-    console.log(ticketList);
     for (let i = 0; i < arrayLength; i++) {
         ticketList.pop();
     }
-    console.log(ticketList);
+    
+    saveToLocal(ticketList);
     $('#purchaseTable').empty()
     $('#totalCost').text("R" + determineTotalCost().toFixed(2));
 }

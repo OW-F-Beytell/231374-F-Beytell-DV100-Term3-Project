@@ -68,28 +68,28 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <h1 class="display-6" style="padding-top: 20px; text-align: center; color: #46a4bd;">The Neptune</h1>
+                    <h1 class="display-6" style="padding-top: 20px; text-align: center; color: #46a4bd;">Tropical Paradise Escape</h1>
                     <img src="assets/neptune.jpg" class="d-block" width="80%" style="margin: 0 auto; border-radius: 25px; margin-bottom: 20px;" alt="...">
                     <div class="carousel-content">
-                      <p class="">Some representative placeholder content for the first slide.</p>
+                      <p class="carousel-paragraph">Experience the ultimate tropical getaway on this 14-day cruise. Explore the beautiful islands of Jamaica and Grand Cayman while enjoying luxurious amenities and breathtaking ocean views.</p>
                       <a href="#" class="btn btn-primary" style="background-color: #C83E4D"><h1 class="display-6">Book Your Spot</h1></a>
                     </div>
                     <div class="carousel-spacer" style="height: 40px; width: 100%;"></div>
                   </div>
                   <div class="carousel-item">
-                    <h1 class="display-6" style="padding-top: 20px; text-align: center; color: #46a4bd;">The Neptune</h1>
-                    <img src="assets/neptune.jpg" class="d-block" width="80%" style="margin: 0 auto; border-radius: 25px; margin-bottom: 20px;" alt="...">
+                    <h1 class="display-6" style="padding-top: 20px; text-align: center; color: #46a4bd;">Greek Isles Odyssey</h1>
+                    <img src="assets/greece.jpg" class="d-block" width="80%" style="margin: 0 auto; border-radius: 25px; margin-bottom: 20px;" alt="...">
                     <div class="carousel-content" style="color: #46a4bd; padding-bottom: 20px;">
-                      <p class="">Some representative placeholder content for the first slide.</p>
+                      <p class="carousel-paragraph">Sail through the picturesque Greek Isles on a 7-day odyssey. Explore the charming villages of Santorini and the lively beaches of Mykonos.</p>
                       <a href="#" class="btn btn-primary" style="background-color: #C83E4D"><h1 class="display-6">Book Your Spot</h1></a>
                     </div>
                     <div class="carousel-spacer" style="height: 40px; width: 100%;"></div>
                   </div>
                   <div class="carousel-item">
-                    <h1 class="display-6" style="padding-top: 20px; text-align: center; color: #46a4bd;">The Neptune</h1>
-                    <img src="assets/neptune.jpg" class="d-block" width="80%" style="margin: 0 auto; border-radius: 25px; margin-bottom: 20px;" alt="...">
+                    <h1 class="display-6" style="padding-top: 20px; text-align: center; color: #46a4bd;">Northern Lights Expedition</h1>
+                    <img src="assets/north.jpeg" class="d-block" width="80%" style="margin: 0 auto; border-radius: 25px; margin-bottom: 20px;" alt="...">
                     <div class="carousel-content" style="color: #46a4bd; padding-bottom: 20px;">
-                      <p class="">Some representative placeholder content for the first slide.</p>
+                      <p class="carousel-paragraph">Chase the mystical Northern Lights on a 12-day expedition from Reykjavik to St. Petersburg. Witness the breathtaking natural phenomenon and explore historic cities.</p>
                       <a href="#" class="btn btn-primary" style="background-color: #C83E4D"><h1 class="display-6">Book Your Spot</h1></a>
                     </div>
                     <div class="carousel-spacer" style="height: 40px; width: 100%;"></div>
@@ -110,8 +110,26 @@
         </div>
         <div class="row" style="margin-top: 50px;">
           <div class="col-6" style="padding-left: 150px; padding-right: 50px;">
-            <div class="weatherBlock"></div>  
+            <div class="weatherBlock" id="tempTable" style="color: #313638;">
+              <h1>Temperatures At Our Destinations</h1>
+              <table class="table overflow-auto">
+                <thead>
+                  <tr>
+                    <th scope="col">Location</th>
+                    <th scope="col">Current Temperature (in degrees Celsius)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>  
           </div>
+
+          
 
           <div class="col-6">
             <div class="homeAccordion">
@@ -204,6 +222,12 @@
 
     </div>
 
+    <template id="locationTempEntry">
+      <tr class="rounded">
+        <td id="locationName"></td>
+        <td id="locationTemp"></td>
+      </tr>
+    </template>
 
  
     <!-- Bootstrap JS -->
